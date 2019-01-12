@@ -5,7 +5,7 @@ class Post < ActiveRecord::Base
   has_many :users, through: :comments
   accepts_nested_attributes_for :categories
 
-  def coment_count
+  def comemnt_count
     comments.length
   end
 
