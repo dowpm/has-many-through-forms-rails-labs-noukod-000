@@ -9,11 +9,6 @@ class Post < ActiveRecord::Base
     comments.length
   end
 
-  def category_ids= ids
-    ids.each do |i|
-      self.categories << Category.find(i) unless i.empty?
-    end
-  end
 
   def categories_attributes= category_attrs
     category_attrs.values.each do |cat_attr|
