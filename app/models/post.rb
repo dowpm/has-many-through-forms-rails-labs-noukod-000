@@ -13,7 +13,7 @@ class Post < ActiveRecord::Base
     ids.each do |i|
       self.categories << Category.find(i)
     end
-  ends
+  end
 
   def categories_attributes= category_attrs
     category_attrs.values.each do |cat_attr|
