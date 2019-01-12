@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @post.categories.build name: 'cool'
+    @post.save
   end
 
   def create
