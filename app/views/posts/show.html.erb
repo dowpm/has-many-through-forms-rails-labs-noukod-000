@@ -17,3 +17,12 @@ Comments:
   <% end %>
 </ul>
 <% end %>
+
+<% if @post.users.size > 0 %>
+Users who comment in the post:
+<ul>
+  <%= @post.users.each do |user| %>
+    <li><%= link_to user.name, user %> </li>
+  <% end %>
+</ul>
+<% end %>
