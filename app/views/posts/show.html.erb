@@ -9,4 +9,11 @@ Categories:
 </ul>
 <% end %>
 
-
+<% if @post.comment_count > 0 %>
+Comments:
+<ul>
+  <%= @post.comments.each do |comment| %>
+    <li><%= comment.content %> </li>
+  <% end %>
+</ul>
+<% end %>
