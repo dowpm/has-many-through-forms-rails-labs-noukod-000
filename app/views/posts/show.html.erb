@@ -21,7 +21,7 @@ Comments:
 <% if @post.users.size > 0 %>
 Users who comment in the post:
 <ul>
-  <%= @post.users.each do |user| %>
+  <%= @post.users.uniq.each do |user| %>
     <li><%= link_to user.username, user %> </li>
   <% end %>
 </ul>
