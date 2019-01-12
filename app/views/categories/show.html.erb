@@ -2,6 +2,6 @@
 Posts:
 <ul>
   <%= @category.posts.each do |p| %>
-    <li><%= link_to p.title, p %> as <%= pluralize(p.coment_count, 'coment') %></li>
+    <li><%= link_to p.title, p %> </li>
   <% end %>
 </ul>
