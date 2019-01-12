@@ -1,8 +1,10 @@
 <h2><%= @post.title %></h2>
 <h2><%= @post.content %></h2>
+<% if @post.comments %>
 Comments:
 <ul>
   <%= @post.comments.each do |comment| %>
     <li><%= link_to comment.content, category %> </li>
   <% end %>
 </ul>
+<% end %>
