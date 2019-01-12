@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
 
   def category_ids= ids
     ids.each do |i|
-      self.categories << Category.find i
+      self.categories << Category.find(i)
     end
   ends
 
